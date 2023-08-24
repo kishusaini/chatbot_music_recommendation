@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up form</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <script type=text/javascript>
+            $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+            </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('a#submit').bind('click', function() {
+                  alert("your response is submitted")
+                    $.getJSON($SCRIPT_ROOT + 'submit', {
+                        first_name: $('input[name="first_name"]').val(),
+                        last_name: $('input[name="last_name"]').val(),
+                        phone_number: $('input[name="phone_number"]').val(),
+                        email: $('input[name="email"]').val(),
+                        password: $('input[name="password"]').val(),
+                    }, function(data) {
+                        $("#submit").text(data.result);
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        {% include 'header.html' %}
+        <br>  
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>Create your account.<br>For Free!</p> 
+                    <a href="{{ url_for('login') }}" class="btn" target="_blank">Log in</a>
+                </div>
+            </div>
+ <div class="col-right">
+    <div class="login-form">
+        <h2>Sign Up</h2>
+        <form id="signupForm>
+            <p>
+                <label> First Name <span>*</span></label>
+                <input type="text" name="first_name" placeholder="First Name" required>
+            </p>
+            <p>
+                <label>Last Name<span>*</span></label>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </p>
+            <p>
+                <label>Phone Number<span>*</span></label>
+                <input type="number" name="phone_number" placeholder="Phone Number" required>
+            </p>
+            <p>
+                <label> Email Address<span>*</span></label>
+                <input type="text" name="email" placeholder="Email Address" required>
+            </p>
+            <p>
+                <label>Password<span>*</span></label>
+                <input type="password" name="password" placeholder="Password" required>
+            </p>
+            <p>
+                <a href="#" id="submit">
+                <input type="submit" value="Sign up">
+                </a>
+            </p>
+        </form>
+    </div>
+ </div>
+        </div>
+    </div>
+<footer>All rights reserved.</footer>

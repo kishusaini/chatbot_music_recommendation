@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+  }
+  #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption h2,
+p {
+    color: #c91010;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 18px;
+}
+
+#carouselExampleCaptions .carousel-item {
+    height: 50vh;
+}
+
+  .song-list {
+    display: flex;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+    white-space:nowrap;
+    padding: 20px;
+    /* display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    height:300px;
+    scroll-behavior: smooth; */
+}
+    
+.popular_song h2 {
+    font-weight: bolder; 
+    margin-left: 25px;
+    margin-top: 15px;
+}  
+
+
+.song-list::-webkit-scrollbar {
+    display: none;
+}
+
+  
+  .song-card { 
+    width: 250px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .song-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .song-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  .top-albums h2{
+font-weight: bolder; 
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  
+  .artist-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    overflow: hidden;
+    word-wrap: break-word;
+    
+  }
+
+.album-list {
+    display: flex;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+    white-space:nowrap;
+    padding: 20px;
+  }
+  .album-list::-webkit-scrollbar {
+    display: none;
+}
+  
+  .album-card {
+    width: 250px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .album-image {
+    width: 200px;
+    /* max-width: 150px; */
+    height: 200px;
+    
+  }
+  
+  .album-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  

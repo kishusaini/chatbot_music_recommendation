@@ -1,0 +1,93 @@
+body, div, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-container {
+    width: 100%;
+    max-width: 800px; 
+    margin: auto;
+    margin-top:60px;
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    background: url(../img/R.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-log {
+    height: 400px; 
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: url(../img/CL.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* background-color: white; */
+  }
+  
+  .user-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .user-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    max-width: 70%;
+  }
+  
+  .bot-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: black;
+    max-width: 70%;
+  }
+  
+  .left {
+    align-self: flex-start;
+  }
+  
+  .right {
+    align-self: flex-end;
+  }
+ 
+#fetch-recommendations-button {
+  display: block;
+  margin: 5px auto;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #FF5733;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#fetch-recommendations-button:hover {
+  background-color: #E64D29;
+}
